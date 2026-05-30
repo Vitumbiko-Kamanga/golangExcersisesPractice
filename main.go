@@ -10,7 +10,7 @@ func square( n int) int{
 }
 
 // function for generating the sum of Old Perfect Square numbers
-func oldPerfectSquareNums(n int) (int){
+func oldPerfectSquareNumsSum(n int) (int){
     m := []int {}
     sum := 0
     for i := 1; i <= n; i++ {
@@ -25,6 +25,6 @@ func oldPerfectSquareNums(n int) (int){
 
 func main() {
     // function calling for finding the sum of Old Perfect Square numbers in a given range (parameter)
-    fmt.Println(oldPerfectSquareNums(5))
+    fmt.Println(oldPerfectSquareNumsSum(5))
 
 }
