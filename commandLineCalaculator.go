@@ -9,7 +9,7 @@ func add(a float64, b float64) float64{
 }
 func divide (a float64, b float64) float64 {
 	if b == 0 {
-		fmt.Println("Err")
+		// return a positive infinity
 		return math.Inf(1)
 	}
 	return a / b
