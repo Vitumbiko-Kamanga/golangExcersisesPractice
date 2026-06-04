@@ -4,15 +4,21 @@ import (
 	"strings"
 )
 
-func main(){
-	name := "vitumbiko kamanga"
-	name2 := strings.Split(name,"")
-	var name3 []string
-	for i:=0; i< len(name2); i++{
+func strConv(str string) string{
+	//converting the string to a slice of letters
+	str2 := strings.Split(str,"")
+
+	for i:=0; i< len(str2); i++{
 		if i%2 == 0{
-			name2[i] = strings.ToUpper(name2[i])
+			// changing the even character to upper case
+			str2[i] = strings.ToUpper(str2[i])
 		}
-		name3 = append(name3,name2[i])
-		fmt.Print(name3[i])
 	}
+	// returning the single string
+	return strings.Join(str2, "")
+}
+
+func main(){
+	fmt.Println(strConv("vitumbiko kamanga"))
+	
 }
