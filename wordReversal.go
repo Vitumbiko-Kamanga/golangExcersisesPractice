@@ -16,12 +16,15 @@ func main (){
 				name4 = strings.Split(name2[i],"")
 				name5 = append(name5, name4[j])
 			}
-			strings.Join(name5, "")
-			name3 = append(name3, name5[i])
+			name2[i] = strings.Join(name5, "")
+			name3 = append(name3, " ")
+			name3 = append(name3, name2[i])
 		}else{
+			name3 = append(name3, " ")
 			name3 = append(name3, name2[i])
 		}
 	}
+	name = strings.Join(name3, "")
 	
-	fmt.Println(name2)
+	fmt.Println(name)
 }
