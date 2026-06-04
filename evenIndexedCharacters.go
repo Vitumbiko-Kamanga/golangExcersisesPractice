@@ -12,6 +12,8 @@ func strConv(str string) string{
 		if i%2 == 0{
 			// changing the even character to upper case
 			str2[i] = strings.ToUpper(str2[i])
+		}else{
+			str2[i] = strings.ToLower(str2[i])
 		}
 	}
 	// returning the single string
@@ -19,6 +21,6 @@ func strConv(str string) string{
 }
 
 func main(){
-	fmt.Println(strConv("vitumbiko kamanga"))
+	fmt.Println(strConv("VITUMBIKO kamanga"))
 	
 }
