@@ -17,11 +17,16 @@ func toReverse(str string) string{
 			}
 			name2[i] = strings.Join(name5, "")
 			name3 = append(name3, name2[i])
-			name3 = append(name3, " ")
+			if len(name2) > 0{
+				name3 = append(name3, " ")
+			}
+			
 			name5 = nil
 		}else{
 			name3 = append(name3, name2[i])
-			name3 = append(name3, " ")
+			if len(name2) > 0{
+				name3 = append(name3, " ")
+			}
 		}
 	}
 	return strings.Join(name3, "")
