@@ -5,15 +5,14 @@ import (
 
 )
 
-func main() {
-	list := []int{90, 81, 77, 73, 70, 84,100}
+func maxMin(m []int) []int{
 	var minMax []int
-	var min, max int = list[0], list[0]
-	for i := 0; i < len(list); i++ {
-		if list[i] < min {
-			min = list[i]
-		} else if list[i] > max {
-			max = list[i]
+	var min, max int = m[0],m[0]
+	for i := 0; i < len(m); i++ {
+		if m[i] < min {
+			min = m[i]
+		} else if m[i] > max {
+			max = m[i]
 		}else{
 			continue
 		}
@@ -21,5 +20,10 @@ func main() {
 	}
 	minMax = append(minMax, min)
 	minMax = append(minMax, max)
-	fmt.Println(minMax)
+	return minMax
+}
+func main() {
+	grades := []int{90, 81, 77, 73, 70, 84}
+	fmt.Println(maxMin(grades))
+	
 }
